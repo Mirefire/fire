@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>中国兵器</title>
+    <link rel="stylesheet" href="/src/renderer/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/renderer/assets/layer/css/layui.css">
+    <link rel="stylesheet" href="/src/renderer/assets/layer/css/layer.css">
+    <link rel="stylesheet" href="/src/renderer/assets/css/style.css">
+    <% if (htmlWebpackPlugin.options.nodeModules) { %>
+      <!-- Add `node_modules/` to global paths so `require` works properly in development -->
+      <script>
+        require('module').globalPaths.push('<%= htmlWebpackPlugin.options.nodeModules.replace(/\\/g, '\\\\') %>')
+      </script>
+    <% } %>
+    <style>
+      html,body{
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background-size: cover;
+      }
+      body{
+        background: url('/src/renderer/assets/iamges/bac.jpg') no-repeat 100%;
+        background-size:cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- Set `__static` path to static files in production -->
+    <script>
+      if (process.env.NODE_ENV !== 'development') window.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
+    </script>
+    <!-- <script src="/src/renderer/assets/js/jquery-3.2.1.min.js"></script> -->
+    <!-- <script>if (typeof module === 'object') { window.jQuery = window.$ = module.exports; } </script> -->
+    <!-- <script src="/src/renderer/assets/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="/src/renderer/assets/layer/layui.js"></script>
+    <script src="/src/renderer/assets/layer/lay/modules/layer.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+    <!-- <script src="/src/renderer/assets/js/d3.min.js"></script> -->
+    <!-- <!-- <script src="/src/renderer/assets/js/d3.v4.js"></script> -->
+     
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+    <!-- webpack builds are automatically injected -->
+  </body>
+</html>

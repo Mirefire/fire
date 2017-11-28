@@ -1,0 +1,36 @@
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* 清除浮动 */
+.clean-fix{
+    clear: both;
+}
+.index-mian{
+    margin-top:20px;
+    background: #fff; 
+    /* border: 1px solid #000; */
+}
+.list-view{
+    width: 800px;
+    margin: 0 auto;
+}
+/* 分届线 */
+.bottom-line{
+    margin: 15px 0;
+    height: 2px;
+    background: #F2F2F2;
+    width: 100%;
+ }
+ .bottom-line2{
+    margin: 15px 0;
+    height: 4px;
+    background: #ccc;
+    width: 100%;
+ }
